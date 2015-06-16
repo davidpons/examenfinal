@@ -1,23 +1,30 @@
 package ventanas;
 
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
 
-public class VentanaAcciones extends JPanel {
-	private JTextField txtConsultarImpagaments;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+public class VentanaAcciones extends JFrame {
+
+	private JPanel contentPane;
+
+
 
 	/**
-	 * Create the panel.
+	 * Create the frame.
 	 */
-	public VentanaAcciones() {
-		setLayout(null);
+	public VentanaAcciones(JPanel panelACargar) {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = panelACargar==null?new JPanel():panelACargar;
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
 		
-		txtConsultarImpagaments = new JTextField();
-		txtConsultarImpagaments.setText("Consultar Impagaments");
-		txtConsultarImpagaments.setBounds(97, 43, 166, 20);
-		add(txtConsultarImpagaments);
-		txtConsultarImpagaments.setColumns(10);
-
+		//Le asignamos el panel que nos llega como parametro		
+		setContentPane(contentPane);
 	}
+
 }
