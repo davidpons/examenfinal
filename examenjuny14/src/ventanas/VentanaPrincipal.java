@@ -9,6 +9,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 
+import modelo.ConexionDB;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -19,6 +21,8 @@ public class VentanaPrincipal extends JFrame {
 	private JFrame ventanaAcciones;
 	
 	private VentanaPrincipal ventanaPrincipal;
+
+	private ConexionDB bd;
 	
 	/**
 	 * Create the frame.
@@ -31,6 +35,9 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		//Arrancamos la BD...
+		arrancarBD();
 		
 		//Me guardo una referencia a la propia ventana.
 		ventanaPrincipal = this;
@@ -86,6 +93,14 @@ public class VentanaPrincipal extends JFrame {
 		ventanaAcciones.invalidate();
 		//ventanaAcciones.setContentPane(null);
 		ventanaAcciones.setVisible(false);
+	}
+	
+	private void arrancarBD(){
+		//Los datos los especifica profesor
+		this.bd = new ConexionDB("localhost", "examenjuny14", "root", "");
+		
+		//Aqui estamos realizando la conexion real con BD.
+		this.bd.conectarDB();
 	}
 	
 	/**
