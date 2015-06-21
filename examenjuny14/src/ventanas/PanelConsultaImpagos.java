@@ -10,6 +10,8 @@ import modelo.SocioModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.util.List;
+import java.awt.Font;
+import java.awt.Color;
 
 @SuppressWarnings("serial")
 public class PanelConsultaImpagos extends JPanel {
@@ -22,8 +24,10 @@ public class PanelConsultaImpagos extends JPanel {
 	public PanelConsultaImpagos(final VentanaPrincipal vPrincipal) {
 		setLayout(null);
 		
-		JLabel lblConsultarImpagaments = new JLabel("Consultar impagaments");
-		lblConsultarImpagaments.setBounds(156, 60, 112, 14);
+		JLabel lblConsultarImpagaments = new JLabel("Consultar Impagaments");
+		lblConsultarImpagaments.setForeground(Color.MAGENTA);
+		lblConsultarImpagaments.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.ITALIC, 16));
+		lblConsultarImpagaments.setBounds(130, 49, 242, 23);
 		add(lblConsultarImpagaments);
 				
 		
@@ -50,7 +54,7 @@ public class PanelConsultaImpagos extends JPanel {
 				vPrincipal.setVisible(true);
 			}
 		});
-		btnTornar.setBounds(179, y+40, 89, 23);
+		btnTornar.setBounds(183, 219, 101, 23);
 		add(btnTornar);
 
 	}
