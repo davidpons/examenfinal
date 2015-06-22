@@ -40,10 +40,10 @@ public class PanelConsultaImpagos extends JPanel {
 		
 		for(Socio socio:impagados){
 			JLabel label = new JLabel(socio.toString());
-			label.setBounds(80, y, 312, 24);
+			label.setBounds(50, y, 412, 24);
 			add(label);
 			
-			y = y + 10;
+			y = y + 30;
 		}
 		
 		JButton btnTornar = new JButton("Tornar");
@@ -54,7 +54,7 @@ public class PanelConsultaImpagos extends JPanel {
 				vPrincipal.setVisible(true);
 			}
 		});
-		btnTornar.setBounds(183, 219, 101, 23);
+		btnTornar.setBounds(240, 248, 101, 23);
 		add(btnTornar);
 
 	}

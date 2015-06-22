@@ -18,7 +18,7 @@ public class PanelBuscarDatosSocio extends JPanel {
 	public PanelBuscarDatosSocio(final VentanaPrincipal ventanaPrincipal) {
 		setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Buscar Datos Socio");
+		JLabel lblNewLabel = new JLabel("Cercar dades soci");
 		lblNewLabel.setForeground(Color.RED);
 		lblNewLabel.setFont(new Font("Verdana", Font.PLAIN, 16));
 		lblNewLabel.setBounds(125, 56, 176, 14);
@@ -34,7 +34,7 @@ public class PanelBuscarDatosSocio extends JPanel {
 		btnNewButton.setBounds(234, 213, 104, 23);
 		add(btnNewButton);
 		
-		JButton btnBuscar = new JButton("Buscar");
+		JButton btnBuscar = new JButton("Cercar");
 		btnBuscar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}

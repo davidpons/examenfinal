@@ -17,6 +17,7 @@ public class VentanaAcciones extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaAcciones(JPanel panelACargar) {
+		setTitle("Text");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 337);
 		contentPane = panelACargar==null?new JPanel():panelACargar;
